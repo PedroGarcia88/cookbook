@@ -4,14 +4,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipes</title>
+<title>Recipe ${recipe.id}</title>
 </head>
-<body>
-<ul>
-<c:forEach var="item" items='${items}'>
-	<li><c:out value="${item}"></c:out></li>
-</c:forEach>
-</ul>
-<img src="/static/cookbook.png" />
+<body bgcolor="EEEEEE">
+
+<div id="container" style="width:100%">
+
+<div id="header" style="background-color:#00BBDD;">
+<h1 style="margin-bottom:0;">Cookbook</h1></div>
+    
+
+<hr>
+
+<div id="menu" style="background-color:#00BBDD;height:670px;width:10%;float:left;">
+
+<b>Menu</b><br>
+<a href="/">Home</a></br>
+<a href="/recipes">Listar Receitas</a><br/>
+<a href="/recipes/create">Criar Nova Receita</a></div>
+
+<div id="content" style="background-color:#FFFFFF;height:670px;width:90%;float:left;">
+<h1>${recipe.titulo}</h1>
+<b>Problema:</b>
+<p>${recipe.problema}</p>
+<b>Solução:</b>
+<p>${recipe.solucao}</p></div>
+
 </body>
 </html>
